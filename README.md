@@ -5,6 +5,13 @@
   <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="Coder GIF" width="600">
 </p>
 
+<p align="center">
+<br>
+<a href="https://www.instagram.com/hudson.uchoa/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>&nbsp;
+<a href="https://www.linkedin.com/in/hudson-lima-uchoa/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>&nbsp;
+<a href="mailto:uchoa.hudson1@gmail.com?subject=Hola%20Sumanth"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a>&nbsp;
+</p>
+
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hudson-uchoa)](https://github.com/anuraghazra/github-readme-stats)
 
 <!--
