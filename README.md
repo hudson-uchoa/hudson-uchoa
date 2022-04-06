@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <h2> Minhas redes sociais 💚</h2>
+ Minhas redes sociais 💚
 <br>
 <a href="https://www.instagram.com/hudson.uchoa/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>&nbsp;
 <a href="https://www.linkedin.com/in/hudson-lima-uchoa/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>&nbsp;
