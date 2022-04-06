@@ -42,10 +42,10 @@
 <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
 </p>
 <br>
-<br>
 <img align="left" src="https://camo.githubusercontent.com/a98ec88042f69d36f3900668309e445a6df51dcf20e1ecac2b33a81da775af38/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f68725346644d3472673856467058797a326d2f67697068792e676966" alt="GIF"/>
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hudson-uchoa&show_icons=true&theme=dark)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 <!--
 **Hudson-Uchoa/Hudson-Uchoa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
