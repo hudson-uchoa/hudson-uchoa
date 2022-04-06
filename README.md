@@ -1,4 +1,7 @@
-### Hi there 👋
+<img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30">
+<p>
+  <h1 align="center"><b>Oi! Eu sou o Hudson, é um prazer!! 👋</b></h1>
+</p>
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Hudson-Uchoa)](https://github.com/anuraghazra/github-readme-stats)
 
