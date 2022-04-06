@@ -7,7 +7,7 @@
 
 
 <p align="center">
-  ###Sou programador full stack!
+  Minhas redes sociais 💚
 </p>
 
 <p align="center">
