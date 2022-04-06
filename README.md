@@ -24,7 +24,7 @@
 - 🔭 Atualmente trabalhando no meu portfolio :grin:<br>
 - 🥅 2022 Goals: Me tornar Monitor Tech na Resilia Educação.<br>
 - 💬 Me pergunte sobre qualquer coisa, ficarei feliz em ajudar :smile:<br>
-- 📬 Como entrar em contato: [Pode me chamar!](https://www.linkedin.com/in/hudson-lima-uchoa/)<br>
+- 📬 Como entrar em contato: [Me chama lá!](https://www.linkedin.com/in/hudson-lima-uchoa/) <br>
 - 🧗 Estudando sobre: PHP, Typescript e C#.<br>
 - ⚡ Aberto a propostas de emprego! :raised_hands:<br>
 
