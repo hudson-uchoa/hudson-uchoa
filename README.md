@@ -5,7 +5,7 @@
   <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="Coder GIF" width="600">
 </p>
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Hudson-Uchoa)](https://github.com/anuraghazra/github-readme-stats)
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hudson-uchoa)](https://github.com/anuraghazra/github-readme-stats)
 
 <!--
 **Hudson-Uchoa/Hudson-Uchoa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
