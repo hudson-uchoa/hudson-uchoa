@@ -21,12 +21,12 @@
 </h1>
 ##Sou desenvolvedor full stack
 <br>
-- 🔭 Atualmente trabalhando no meu portfolio :grin:<br>
-- 🥅 2022 Goals: Me tornar Monitor Tech na Resilia Educação.<br>
-- 💬 Me pergunte sobre qualquer coisa, ficarei feliz em ajudar :smile:<br>
-- 📬 Como entrar em contato: <a href=“https://www.linkedin.com/in/hudson-lima-uchoa/“>Me chama lá!</a> <br>
-- 🧗 Estudando sobre: PHP, Typescript e C#.<br>
-- ⚡ Aberto a propostas de emprego! :raised_hands:<br>
+- 🔭 Atualmente trabalhando no meu portfolio :grin:<br><br>
+- 🥅 2022 Goals: Me tornar Monitor Tech na Resilia Educação.<br><br>
+- 💬 Me pergunte sobre qualquer coisa, ficarei feliz em ajudar :smile:<br><br>
+- 📬 Como entrar em contato: <a href="https://www.linkedin.com/in/hudson-lima-uchoa/"> Me chama lá! </a> <br><br>
+- 🧗 Estudando sobre: PHP, Typescript e C#.<br><br>
+- ⚡ Aberto a propostas de emprego! :raised_hands:<br><br>
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hudson-uchoa)](https://github.com/anuraghazra/github-readme-stats)
 
