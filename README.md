@@ -20,12 +20,13 @@
   <img src="https://emojis.slackmojis.com/emojis/images/1621024394/39092/cat-roll.gif?1621024394" width="28" />Sobre mim
 </h1>
 ##Sou desenvolvedor full stack
-- 🔭 Atualmente trabalhando no meu portfolio :grin:
-- 🥅 2022 Goals: Me tornar Monitor Tech na Resilia Educação.
-- 💬 Me pergunte sobre qualquer coisa, ficarei feliz em ajudar :smile:
-- 📬 Como entrar em contato: [Pode me chamar!](https://www.linkedin.com/in/hudson-lima-uchoa/)
-- 🧗 Estudando sobre: PHP, Typescript e C#.
-- ⚡ Aberto a propostas de emprego! :raised_hands:
+<br>
+- 🔭 Atualmente trabalhando no meu portfolio :grin:<br>
+- 🥅 2022 Goals: Me tornar Monitor Tech na Resilia Educação.<br>
+- 💬 Me pergunte sobre qualquer coisa, ficarei feliz em ajudar :smile:<br>
+- 📬 Como entrar em contato: [Pode me chamar!](https://www.linkedin.com/in/hudson-lima-uchoa/)<br>
+- 🧗 Estudando sobre: PHP, Typescript e C#.<br>
+- ⚡ Aberto a propostas de emprego! :raised_hands:<br>
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hudson-uchoa)](https://github.com/anuraghazra/github-readme-stats)
 
