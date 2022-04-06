@@ -44,9 +44,8 @@
 <br>
 <img src="https://camo.githubusercontent.com/a98ec88042f69d36f3900668309e445a6df51dcf20e1ecac2b33a81da775af38/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f68725346644d3472673856467058797a326d2f67697068792e676966" alt="GIF"/>
 <br>
-<div align="left">
-  [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hudson-uchoa&show_icons=true&theme=dark)]
-</div>
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hudson-uchoa&show_icons=true&theme=dark)]
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hudson-uchoa&layout=compact&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 <!--
