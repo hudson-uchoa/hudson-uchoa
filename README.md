@@ -15,7 +15,7 @@
 </p>
 
 <h1 align="left">
-  Sobre mim
+  <img src="https://emojis.slackmojis.com/emojis/images/1621024394/39092/cat-roll.gif?1621024394" width="28" />Sobre mim
 </h1>
 ##Sou desenvolvedor full stack
 
