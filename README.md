@@ -19,7 +19,7 @@
 <h1 align="left">
   <img src="https://emojis.slackmojis.com/emojis/images/1621024394/39092/cat-roll.gif?1621024394" width="28" />Sobre mim
 </h1>
-##Sou desenvolvedor full stack
+##Sou desenvolvedor full stack <br> <br>
 <br>
 - 🔭 Atualmente trabalhando no meu portfolio :grin:<br><br>
 - 🥅 2022 Goals: Me tornar Monitor Tech na Resilia Educação.<br><br>
