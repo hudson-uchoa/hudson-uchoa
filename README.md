@@ -4,7 +4,9 @@
 <p align="center">
   <img src="https://miro.medium.com/max/3600/0*n-2bW82Z6m6U2bij.jpeg" alt="cat coding" width="800">
 </p>
-
+<h4 align="center">
+  "Olhe para dentro de si mesmo e reconheça que a mudança começa com você. Começa comigo. Começa com todos nós."
+</h4>
 <h2 align="center">Minhas redes sociais💚</h2>
 <p align="center">
   <a href="https://www.instagram.com/hudson.uchoa/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>&nbsp;
