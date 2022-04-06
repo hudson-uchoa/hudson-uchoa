@@ -6,9 +6,9 @@
 </p>
 
 
-<p align="center">
+<h2 align="center">
   Minhas redes sociais 💚
-</p>
+</h2>
 
 <p align="center">
 <br>
