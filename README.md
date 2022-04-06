@@ -2,7 +2,7 @@
   <h1 align="center"><b>Olá, eu sou o Hudson, é um prazer!</b> <img src="https://emojis.slackmojis.com/emojis/images/1588315024/8823/hyperkitty.gif?1588315024" width="30" /></h1>
 </p>
 <p align="center">
-  <img src="https://miro.medium.com/max/3600/0*n-2bW82Z6m6U2bij.jpeg" alt="cat coding" width="600">
+  <img src="https://miro.medium.com/max/3600/0*n-2bW82Z6m6U2bij.jpeg" alt="cat coding" width="800">
 </p>
 
 <h2 align="center">Minhas redes sociais💚</h2>
