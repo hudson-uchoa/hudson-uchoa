@@ -14,7 +14,7 @@
   <a href="mailto:uchoa.hudson1@gmail.com?subject=Ola"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a>&nbsp;
 </p>
 
-<img src="https://i.imgur.com/h3xgoOu.gif" alt="GIF" width="150px" align="right"  />
+<img src="https://i.imgur.com/h3xgoOu.gif" alt="GIF" width="200px" align="right"  />
 
 <h1 align="left">
   <img src="https://emojis.slackmojis.com/emojis/images/1621024394/39092/cat-roll.gif?1621024394" width="28" />Sobre mim
