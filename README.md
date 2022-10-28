@@ -25,7 +25,7 @@
 - 🥅 2022 Goals: Me tornar Monitor Tech na Resilia Educação.<br><br>
 - 💬 Me pergunte sobre qualquer coisa, ficarei feliz em ajudar :smile:<br><br>
 - 📬 Como entrar em contato: <a href="https://www.linkedin.com/in/hudson-lima-uchoa/"> Me chama lá! </a> <br><br>
-- 🧗 Estudando sobre: PHP, Typescript e React.js.<br><br>
+- 🧗 Estudando sobre: C#, Typescript e React.js.<br><br>
 - ⚡ Aberto a propostas de emprego! :raised_hands:<br><br>
 <br> <br>
 
