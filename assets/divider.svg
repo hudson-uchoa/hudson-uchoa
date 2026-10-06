@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 34" width="1200" height="34" role="img">
+<title>A comet crossing a thin line of light</title>
+<style>
+  @keyframes twinkle { 0%, 100% { opacity: 0.25 } 50% { opacity: 1 } }
+  @keyframes spin { to { transform: rotate(360deg) } }
+  @keyframes drift { to { transform: translateX(var(--drift)) } }
+  .t1 { animation: twinkle 3.1s ease-in-out infinite }
+  .t2 { animation: twinkle 4.7s ease-in-out infinite }
+  .t3 { animation: twinkle 6.3s ease-in-out infinite }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important }
+    .cover, .transient { display: none }
+  }
+  @keyframes fly { from { transform: translateX(-140px) } to { transform: translateX(1340px) } }
+  .comet { animation: fly 8s linear infinite }
+</style>
+<defs><linearGradient id="dl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#A99BFF" stop-opacity="0"/><stop offset="0.5" stop-color="#A99BFF" stop-opacity="0.9"/><stop offset="1" stop-color="#A99BFF" stop-opacity="0"/></linearGradient>
+<linearGradient id="dt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFD27A" stop-opacity="0"/><stop offset="1" stop-color="#FFD27A"/></linearGradient></defs>
+<rect x="0" y="16.25" width="1200" height="1.5" fill="url(#dl)"/>
+<path fill="#FFD27A" d="M600 8Q602.7 14.3 609 17Q602.7 19.7 600 26Q597.3 19.7 591 17Q597.3 14.3 600 8Z"/><path fill="#A99BFF" d="M300 13Q301.2 15.8 304 17Q301.2 18.2 300 21Q298.8 18.2 296 17Q298.8 15.8 300 13Z"/><path fill="#A99BFF" d="M900 13Q901.2 15.8 904 17Q901.2 18.2 900 21Q898.8 18.2 896 17Q898.8 15.8 900 13Z"/>
+<g class="comet transient"><rect x="-90" y="15.75" width="90" height="2.5" rx="1.25" fill="url(#dt)"/><circle cx="0" cy="17" r="3.4" fill="#FFD27A"/></g>
+</svg>

@@ -1,49 +1,126 @@
-<p>
-  <h1 align="center"><b>Olá, eu sou o Hudson, é um prazer!</b> <img src="https://emojis.slackmojis.com/emojis/images/1588315024/8823/hyperkitty.gif?1588315024" width="30" /></h1>
-</p>
+<a href="https://github.com/hudson-uchoa?tab=repositories">
+  <img src="assets/hero.svg" width="100%" alt="Hudson Uchoa — full-stack developer, São José dos Campos, Brazil. A ringed planet turns in a field of stars while a terminal types: building software that orbits real life.">
+</a>
+
 <p align="center">
-  <img src="https://miro.medium.com/max/3600/0*n-2bW82Z6m6U2bij.jpeg" alt="cat coding" width="800">
+  <a href="https://github.com/hudson-uchoa?tab=repositories"><img src="assets/pill-repositories.svg" height="44" alt="All repositories"></a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/hudson-lima-uchoa/"><img src="assets/pill-linkedin.svg" height="44" alt="LinkedIn"></a>
+  &nbsp;
+  <a href="https://www.instagram.com/hudson.uchoa/"><img src="assets/pill-instagram.svg" height="44" alt="Instagram"></a>
 </p>
-<h4 align="center">
-  "Olhe para dentro de si mesmo e reconheça que a mudança começa com você. Começa comigo. Começa com todos nós."
-</h4>
-<h2 align="center">Minhas redes sociais💚</h2>
+
+<img src="assets/divider.svg" width="100%" alt="">
+
+## Mission log
+
+I'm Hudson, a full-stack developer from São José dos Campos — Brazil's
+aerospace city, which may explain the theme.
+
+I got here in 2021 through Resilia's web development course, building my
+first pages in HTML, CSS and JavaScript. The orbit has widened since: REST
+APIs in PHP with Laravel and Slim, services in Node.js, bots in Python, and
+now a React Native app with a FastAPI and PostgreSQL back end.
+
+I like software that survives real life: offline-first, safe to retry, tested
+before it is written. Lately I build spec-first with AI agents. I decide what
+the product should do; one agent writes and reviews the spec, another
+implements it test-first, and every review is public in the repository.
+
+At home there are four cats and a dog: Aurora, Asteria, Aelin, Andrômeda and
+Katarina. The space theme was never really a choice.
+
+> Change starts with you. It starts with me. It starts with all of us.
+
+<img src="assets/divider.svg" width="100%" alt="">
+
+## The stack, as a constellation
+
+<img src="assets/constellation.svg" width="100%" alt="Four constellations of labelled stars. Languages: TypeScript, JavaScript, Python, PHP. Front end and mobile: React, React Native, Expo, HTML and CSS. Back end: FastAPI, Node.js, Laravel, Slim. Data and tooling: PostgreSQL, MySQL, Redis, SQLite, Docker, Git.">
+
+<details>
+<summary>The same sky, as text</summary>
+<br>
+
+- **Languages:** TypeScript, JavaScript, Python, PHP
+- **Front end and mobile:** React, React Native, Expo, HTML and CSS
+- **Back end:** FastAPI, Node.js, Laravel, Slim
+- **Data and tooling:** PostgreSQL, MySQL, Redis, SQLite, Docker, Git
+
+</details>
+
+<img src="assets/divider.svg" width="100%" alt="">
+
+## Projects in orbit
+
+Six worlds worth a visit. Click a planet to land on its repository.
+
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="https://github.com/hudson-uchoa/pawlaris"><img src="assets/planet-pawlaris.svg" width="150" alt=""></a>
+      <h3><a href="https://github.com/hudson-uchoa/pawlaris">Pawlaris</a></h3>
+      Self-hosted, offline-first pet care for a household: tasks, medication, walks and who did what. Built in the open, spec first.
+      <br><br>
+      <sub>TypeScript · React Native · Python · FastAPI · PostgreSQL</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="https://github.com/hudson-uchoa/ByteWatch"><img src="assets/planet-bytewatch.svg" width="150" alt=""></a>
+      <h3><a href="https://github.com/hudson-uchoa/ByteWatch">ByteWatch</a></h3>
+      A Discord bot that tracks coding and study sessions, projects, and how much of the work leaned on AI assistants, with a weekly ranking.
+      <br><br>
+      <sub>Python · SQLite · Discord</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="https://github.com/hudson-uchoa/TaskMate"><img src="assets/planet-taskmate.svg" width="150" alt=""></a>
+      <h3><a href="https://github.com/hudson-uchoa/TaskMate">TaskMate</a></h3>
+      A to-do app with accounts, full task management and status counters, shipped as a Docker Compose stack.
+      <br><br>
+      <sub>PHP · Slim · React · PostgreSQL · Redis · Docker</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="https://github.com/hudson-uchoa/multi-contact-management"><img src="assets/planet-contacts.svg" width="150" alt=""></a>
+      <h3><a href="https://github.com/hudson-uchoa/multi-contact-management">Multi Contact Management</a></h3>
+      People and their contacts, with authentication, soft deletes, statistics by country and a countries API.
+      <br><br>
+      <sub>PHP · Laravel · MariaDB · Bootstrap</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="https://github.com/hudson-uchoa/magic_api"><img src="assets/planet-magic.svg" width="150" alt=""></a>
+      <h3><a href="https://github.com/hudson-uchoa/magic_api">Magic API</a></h3>
+      A JWT-protected REST API for Magic: The Gathering sets and cards, object-oriented and nearly framework-free, with a cached public listing.
+      <br><br>
+      <sub>PHP · Slim · MySQL</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="https://github.com/hudson-uchoa/API-Rest-Transportadora"><img src="assets/planet-transportadora.svg" width="150" alt=""></a>
+      <h3><a href="https://github.com/hudson-uchoa/API-Rest-Transportadora">API Transportadora</a></h3>
+      A REST API for a freight carrier, built as the closing project of the fourth module at Resilia.
+      <br><br>
+      <sub>JavaScript · Node.js · Express · SQLite</sub>
+    </td>
+  </tr>
+</table>
+
 <p align="center">
-  <a href="https://www.instagram.com/hudson.uchoa/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>&nbsp;
-  <a href="https://www.linkedin.com/in/hudson-uchoa/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>&nbsp;
-  <a href="mailto:uchoa.hudson1@gmail.com?subject=Ola"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a>&nbsp;
+  <a href="https://github.com/hudson-uchoa?tab=repositories"><img src="assets/pill-repositories.svg" height="44" alt="All repositories"></a>
 </p>
 
-<img src="https://i.imgur.com/h3xgoOu.gif" alt="GIF" width="400px" align="right"  />
+<img src="assets/divider.svg" width="100%" alt="">
 
-<h1 align="left">
-  <img src="https://emojis.slackmojis.com/emojis/images/1621024394/39092/cat-roll.gif?1621024394" width="28" />Sobre mim
-</h1>
-##Sou desenvolvedor full stack <br> <br>
-<br>
-- 🔭 Atualmente trabalhando no meu portfolio :grin:<br><br>
-- 🥅 2022 Goals: Me tornar Monitor Tech na Resilia Educação.<br><br>
-- 💬 Me pergunte sobre qualquer coisa, ficarei feliz em ajudar :smile:<br><br>
-- 📬 Como entrar em contato: <a href="https://www.linkedin.com/in/hudson-uchoa"> Me chama lá! </a> <br><br>
-- 🧗 Estudando sobre: C#, Typescript e React.js.<br><br>
-- ⚡ Aberto a propostas de emprego! :raised_hands:<br><br>
-<br> <br>
+## Open a channel
 
-<h2 align="left">:hammer_and_wrench: Technologies and Tools I use:</h2>
-<p align="left">
-    <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
-    <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
-<a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
-    <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a>
-    <a href="https://expressjs.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a>
-    <a href="https://www.mongodb.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
-<a href="https://www.postman.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a>
-<a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
-</p>
-<br>
-<img src="https://camo.githubusercontent.com/a98ec88042f69d36f3900668309e445a6df51dcf20e1ecac2b33a81da775af38/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f68725346644d3472673856467058797a326d2f67697068792e676966" alt="GIF"/>
-<br>
+The quickest way to reach me is
+[LinkedIn](https://www.linkedin.com/in/hudson-lima-uchoa/). Questions about a
+repository are welcome in its issues, and a star on anything you found useful
+keeps the lights on up here.
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hudson-uchoa&show_icons=true&theme=dark)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hudson-uchoa&layout=compact&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+<img src="assets/footer.svg" width="100%" alt="Thanks for stopping by. Clear skies.">
+
+<sub>No GIFs were harmed in the making of this page: every animation is an SVG
+drawn by <a href="scripts/build-assets.mjs"><code>scripts/build-assets.mjs</code></a>,
+and each one holds still if your system asks for reduced motion.</sub>
