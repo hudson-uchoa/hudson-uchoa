@@ -1,7 +1,7 @@
 {
   "login": "hudson-uchoa",
-  "commits": 931,
-  "commitsLastYear": 221,
+  "commits": 932,
+  "commitsLastYear": 222,
   "pullRequests": 103,
   "issues": 0,
   "reviews": 0,
@@ -14,12 +14,12 @@
       "bytes": 458367
     },
     {
-      "name": "TypeScript",
-      "bytes": 158288
+      "name": "JavaScript",
+      "bytes": 167640
     },
     {
-      "name": "JavaScript",
-      "bytes": 154390
+      "name": "TypeScript",
+      "bytes": 158288
     },
     {
       "name": "Python",
