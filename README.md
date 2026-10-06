@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/hudson-uchoa?tab=repositories"><img src="assets/pill-repositories.svg" height="44" alt="All repositories"></a>
   &nbsp;
-  <a href="https://www.linkedin.com/in/hudson-lima-uchoa/"><img src="assets/pill-linkedin.svg" height="44" alt="LinkedIn"></a>
+  <a href="https://www.linkedin.com/in/hudson-uchoa/"><img src="assets/pill-linkedin.svg" height="44" alt="LinkedIn"></a>
   &nbsp;
   <a href="https://www.instagram.com/hudson.uchoa/"><img src="assets/pill-instagram.svg" height="44" alt="Instagram"></a>
 </p>
