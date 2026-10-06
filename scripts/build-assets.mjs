@@ -525,6 +525,28 @@ ${panel.close}`;
   return svg(W, H, `Insurge: custom software, against the generic. Orbyta, its product system, drawn as a violet black hole with seven planets in orbit: ${spoken}.`, style, body);
 }
 
+// The mark that products of the Insurge ecosystem carry: a small black hole
+// and the words, in the studio's violet.
+function insurgeBadge() {
+  const W = 204;
+  const H = 40;
+  const x = 24;
+  const y = 20;
+  const arc = (sweep) => `M${x - 15} ${y}A15 3.6 0 0 ${sweep} ${x + 15} ${y}`;
+  const style = `
+  @keyframes swell { 0%, 100% { opacity: 0.7 } 50% { opacity: 1 } }
+  .swell { animation: swell 4s ease-in-out infinite }`;
+  const body = `<defs><radialGradient id="br"><stop offset="0.5" stop-color="${INSURGE.deep}" stop-opacity="0"/><stop offset="0.66" stop-color="${INSURGE.glow}"/><stop offset="1" stop-color="${INSURGE.violet}" stop-opacity="0"/></radialGradient>
+<linearGradient id="bd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${INSURGE.deep}"/><stop offset="0.5" stop-color="${INSURGE.violet}"/><stop offset="1" stop-color="${INSURGE.lavender}"/></linearGradient></defs>
+<rect x="0.75" y="0.75" width="${W - 1.5}" height="${H - 1.5}" rx="19.25" fill="${C.surface}" stroke="${INSURGE.violet}" stroke-width="1.5"/>
+<path d="${arc(1)}" transform="rotate(-12 ${x} ${y})" fill="none" stroke="url(#bd)" stroke-width="2.2" stroke-linecap="round" opacity="0.6"/>
+<circle class="swell" cx="${x}" cy="${y}" r="12" fill="url(#br)"/>
+<circle cx="${x}" cy="${y}" r="6.6" fill="${INSURGE.void}"/>
+<path d="${arc(0)}" transform="rotate(-12 ${x} ${y})" fill="none" stroke="url(#bd)" stroke-width="2.6" stroke-linecap="round"/>
+<text x="48" y="25.5" font-family="${SANS}" font-size="15" fill="${C.muted}">powered by <tspan font-weight="700" fill="${C.text}">Insurge</tspan></text>`;
+  return svg(W, H, 'powered by Insurge', style, body);
+}
+
 function pill(label) {
   const W = Math.round(64 + label.length * 9.6);
   const H = 44;
@@ -570,6 +592,7 @@ const files = {
   'footer.svg': footer(),
   'telemetry.svg': telemetry(),
   'insurge.svg': insurge(),
+  'badge-insurge.svg': insurgeBadge(),
   'spectrum.svg': spectrum(),
   'icon-pawlaris.svg': pawlarisIcon(),
   'pill-repositories.svg': pill('All repositories'),

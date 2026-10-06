@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 204 40" width="204" height="40" role="img">
+<title>powered by Insurge</title>
+<style>
+  @keyframes twinkle { 0%, 100% { opacity: 0.25 } 50% { opacity: 1 } }
+  @keyframes spin { to { transform: rotate(360deg) } }
+  @keyframes drift { to { transform: translateX(var(--drift)) } }
+  .t1 { animation: twinkle 3.1s ease-in-out infinite }
+  .t2 { animation: twinkle 4.7s ease-in-out infinite }
+  .t3 { animation: twinkle 6.3s ease-in-out infinite }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important }
+    .cover, .transient { display: none }
+  }
+  @keyframes swell { 0%, 100% { opacity: 0.7 } 50% { opacity: 1 } }
+  .swell { animation: swell 4s ease-in-out infinite }
+</style>
+<defs><radialGradient id="br"><stop offset="0.5" stop-color="#4B0FCE" stop-opacity="0"/><stop offset="0.66" stop-color="#D075EF"/><stop offset="1" stop-color="#7224FB" stop-opacity="0"/></radialGradient>
+<linearGradient id="bd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4B0FCE"/><stop offset="0.5" stop-color="#7224FB"/><stop offset="1" stop-color="#B895FF"/></linearGradient></defs>
+<rect x="0.75" y="0.75" width="202.5" height="38.5" rx="19.25" fill="#0D1024" stroke="#7224FB" stroke-width="1.5"/>
+<path d="M9 20A15 3.6 0 0 1 39 20" transform="rotate(-12 24 20)" fill="none" stroke="url(#bd)" stroke-width="2.2" stroke-linecap="round" opacity="0.6"/>
+<circle class="swell" cx="24" cy="20" r="12" fill="url(#br)"/>
+<circle cx="24" cy="20" r="6.6" fill="#030308"/>
+<path d="M9 20A15 3.6 0 0 0 39 20" transform="rotate(-12 24 20)" fill="none" stroke="url(#bd)" stroke-width="2.6" stroke-linecap="round"/>
+<text x="48" y="25.5" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#A4A9D1">powered by <tspan font-weight="700" fill="#EEF0FF">Insurge</tspan></text>
+</svg>

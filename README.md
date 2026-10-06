@@ -49,7 +49,9 @@ businesses that have outgrown off-the-shelf software. Its own products live in
 part of an operation, each moon is one of its modules, and all of it is still
 under construction.
 
-What leaves the studio will carry a small **by Insurge** mark.
+What joins its ecosystem carries a **powered by Insurge** mark, starting with
+[Pawlaris](https://github.com/hudson-uchoa/pawlaris): a project of my own that
+is becoming part of it.
 
 <img src="assets/divider.svg" width="100%" alt="">
 
@@ -96,6 +98,8 @@ Six worlds worth a visit. Click one to land on its repository.
       Self-hosted, offline-first pet care for a household: tasks, medication, walks and who did what. Built in the open, spec first.
       <br><br>
       <sub>TypeScript · React Native · Python · FastAPI · PostgreSQL</sub>
+      <br><br>
+      <a href="https://insurge.pages.dev/"><img src="assets/badge-insurge.svg" height="32" alt="powered by Insurge"></a>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="https://github.com/hudson-uchoa/ByteWatch"><img src="assets/planet-bytewatch.svg" width="150" alt=""></a>
