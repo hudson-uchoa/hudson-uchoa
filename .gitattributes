@@ -1,0 +1,3 @@
+# The images are generated on Windows and on the Linux runner: one line
+# ending everywhere keeps a rebuild from showing up as a change.
+* text=auto eol=lf

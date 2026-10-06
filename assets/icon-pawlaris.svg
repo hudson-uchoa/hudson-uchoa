@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180" role="img">
+<title>The Pawlaris app icon: a paw whose toe pads are four stars</title>
+<style>
+  @keyframes twinkle { 0%, 100% { opacity: 0.25 } 50% { opacity: 1 } }
+  @keyframes spin { to { transform: rotate(360deg) } }
+  @keyframes drift { to { transform: translateX(var(--drift)) } }
+  .t1 { animation: twinkle 3.1s ease-in-out infinite }
+  .t2 { animation: twinkle 4.7s ease-in-out infinite }
+  .t3 { animation: twinkle 6.3s ease-in-out infinite }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important }
+    .cover, .transient { display: none }
+  }
+  @keyframes shine { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.14) } }
+  @keyframes breathe { 0%, 100% { opacity: 0.7 } 50% { opacity: 1 } }
+  .toe { transform-box: fill-box; transform-origin: center; animation: shine 3.8s ease-in-out infinite }
+  .glow { animation: breathe 3.8s ease-in-out infinite }
+</style>
+<defs><radialGradient id="is" cx="50%" cy="28%" r="85%"><stop offset="0" stop-color="#1B2157"/><stop offset="1" stop-color="#090B1A"/></radialGradient>
+<linearGradient id="ip" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C3B8FF"/><stop offset="1" stop-color="#7767E6"/></linearGradient>
+<radialGradient id="ig"><stop offset="0" stop-color="#FFD27A" stop-opacity="0.5"/><stop offset="1" stop-color="#FFD27A" stop-opacity="0"/></radialGradient>
+<radialGradient id="ih"><stop offset="0.62" stop-color="#A99BFF" stop-opacity="0.3"/><stop offset="1" stop-color="#A99BFF" stop-opacity="0"/></radialGradient>
+<clipPath id="ic"><rect width="512" height="512" rx="115.61"/></clipPath></defs>
+<circle class="t3" style="animation-delay:-0.61s" cx="15.09" cy="79.21" r="1.36" fill="#A99BFF"/><circle class="t3" style="animation-delay:-5.35s" cx="169.8" cy="8.92" r="1.56" fill="#A99BFF"/><circle class="t3" style="animation-delay:-4.04s" cx="4.63" cy="84.96" r="1.38" fill="#A99BFF"/><circle class="t3" style="animation-delay:-5.79s" cx="31.88" cy="113.89" r="1.13" fill="#A99BFF"/><circle class="t1" style="animation-delay:-5.67s" cx="1.51" cy="138.37" r="1.72" fill="#A99BFF"/><circle class="t2" style="animation-delay:-5.45s" cx="86.02" cy="141.79" r="1.28" fill="#A99BFF"/><circle class="t1" style="animation-delay:-1.97s" cx="13.06" cy="36.92" r="1.59" fill="#A99BFF"/><circle class="t1" style="animation-delay:-2.95s" cx="61.51" cy="41.7" r="1.25" fill="#A99BFF"/><circle class="t3" style="animation-delay:-5.11s" cx="45.26" cy="95.73" r="1.27" fill="#A99BFF"/>
+<circle cx="90" cy="90" r="88" fill="url(#ih)"/>
+<g transform="translate(28 28) scale(0.2421875)"><g clip-path="url(#ic)"><rect width="512" height="512" fill="url(#is)"/><circle class="t1" style="animation-delay:0s" cx="58" cy="70" r="3" fill="#FFFFFF" fill-opacity="0.7"/><circle class="t2" style="animation-delay:-0.7s" cx="452" cy="96" r="2.5" fill="#FFFFFF" fill-opacity="0.6"/><circle class="t3" style="animation-delay:-1.4s" cx="96" cy="420" r="2" fill="#FFFFFF" fill-opacity="0.5"/><circle class="t1" style="animation-delay:-2.1s" cx="430" cy="400" r="3" fill="#FFFFFF" fill-opacity="0.65"/><circle class="t2" style="animation-delay:-2.8s" cx="250" cy="44" r="2" fill="#FFFFFF" fill-opacity="0.5"/><circle class="t3" style="animation-delay:-3.5s" cx="476" cy="250" r="2" fill="#FFFFFF" fill-opacity="0.45"/><circle class="t1" style="animation-delay:-4.2s" cx="36" cy="250" r="2.5" fill="#FFFFFF" fill-opacity="0.5"/><circle class="t2" style="animation-delay:-4.9s" cx="380" cy="470" r="2" fill="#FFFFFF" fill-opacity="0.4"/><circle class="t3" style="animation-delay:-5.6s" cx="150" cy="480" r="2.5" fill="#FFFFFF" fill-opacity="0.45"/>
+<g transform="translate(256 258) scale(0.66) translate(-256 -252)"><circle class="glow" cx="330" cy="150" r="118" fill="url(#ig)"/><path d="M256 262C300 262 340 300 366 340C392 380 372 430 326 430C300 430 282 414 256 414C230 414 212 430 186 430C140 430 120 380 146 340C172 300 212 262 256 262Z" fill="url(#ip)"/><g class="toe" style="animation-delay:0s"><g transform="rotate(-14 108 264)"><path fill="#FFD27A" d="M108 214Q123 249 158 264Q123 279 108 314Q93 279 58 264Q93 249 108 214Z"/></g></g><g class="toe" style="animation-delay:-0.95s"><g transform="rotate(-5 184 156)"><path fill="#FFD27A" d="M184 98Q201.4 138.6 242 156Q201.4 173.4 184 214Q166.6 173.4 126 156Q166.6 138.6 184 98Z"/></g></g><g class="toe" style="animation-delay:-1.9s"><g transform="rotate(5 330 150)"><path fill="#FFD27A" d="M330 74.6Q352.62 127.38 405.4 150Q352.62 172.62 330 225.4Q307.38 172.62 254.6 150Q307.38 127.38 330 74.6Z"/></g></g><g class="toe" style="animation-delay:-2.85s"><g transform="rotate(14 404 264)"><path fill="#FFD27A" d="M404 214Q419 249 454 264Q419 279 404 314Q389 279 354 264Q389 249 404 214Z"/></g></g></g></g></g>
+<rect x="28" y="28" width="124" height="124" rx="28" fill="none" stroke="#A99BFF" stroke-opacity="0.45"/>
+</svg>

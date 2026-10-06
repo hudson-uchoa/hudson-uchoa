@@ -1,0 +1,43 @@
+name: Refresh telemetry
+
+# Reads the public numbers again, redraws the images that show them, and
+# commits only when something changed.
+
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telemetry
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch the numbers
+        run: node scripts/fetch-stats.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Redraw the images
+        run: node scripts/build-assets.mjs
+      - name: Commit what changed
+        run: |
+          git add data assets
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh the telemetry"
+          git push

@@ -1,0 +1,65 @@
+{
+  "login": "hudson-uchoa",
+  "commits": 931,
+  "commitsLastYear": 221,
+  "pullRequests": 103,
+  "issues": 0,
+  "reviews": 0,
+  "stars": 26,
+  "followers": 45,
+  "repositories": 22,
+  "languages": [
+    {
+      "name": "PHP",
+      "bytes": 458367
+    },
+    {
+      "name": "TypeScript",
+      "bytes": 158288
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 154390
+    },
+    {
+      "name": "Python",
+      "bytes": 140188
+    },
+    {
+      "name": "Blade",
+      "bytes": 129272
+    },
+    {
+      "name": "HTML",
+      "bytes": 110018
+    },
+    {
+      "name": "CSS",
+      "bytes": 66322
+    },
+    {
+      "name": "C#",
+      "bytes": 4436
+    },
+    {
+      "name": "Shell",
+      "bytes": 2225
+    },
+    {
+      "name": "Dockerfile",
+      "bytes": 1606
+    },
+    {
+      "name": "Makefile",
+      "bytes": 1231
+    },
+    {
+      "name": "Mako",
+      "bytes": 375
+    },
+    {
+      "name": "SCSS",
+      "bytes": 290
+    }
+  ]
+}

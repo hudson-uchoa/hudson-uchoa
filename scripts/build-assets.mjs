@@ -1,13 +1,16 @@
 // Draws every image of the profile README as an animated SVG.
 // No dependencies: `node scripts/build-assets.mjs` rewrites assets/*.svg.
+// The numbers in the telemetry images come from data/stats.json, which
+// scripts/fetch-stats.mjs refreshes.
 //
 // The animations are CSS inside each SVG, so they run when GitHub shows the
 // file through <img>, and they stop for readers who ask for reduced motion.
 
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const OUT = fileURLToPath(new URL('../assets/', import.meta.url));
+const STATS = JSON.parse(readFileSync(new URL('../data/stats.json', import.meta.url), 'utf8'));
 
 const NAME = 'Hudson Uchoa';
 const TAGLINE = 'Full-stack developer · São José dos Campos, Brazil';
@@ -65,7 +68,9 @@ ${body}
 `;
 }
 
-function stars(random, count, width, height, { minR = 0.6, maxR = 1.9, color = '#FFFFFF' } = {}) {
+// `skip(x, y)` keeps stars out of an area, so none reads as punctuation
+// next to a number.
+function stars(random, count, width, height, { minR = 0.6, maxR = 1.9, color = '#FFFFFF', skip } = {}) {
   let out = '';
   for (let i = 0; i < count; i += 1) {
     const x = n(random() * width);
@@ -73,6 +78,7 @@ function stars(random, count, width, height, { minR = 0.6, maxR = 1.9, color = '
     const r = n(minR + random() * (maxR - minR));
     const layer = 1 + Math.floor(random() * 3);
     const delay = n(-random() * 6);
+    if (skip?.(x, y)) continue;
     out += `<circle class="t${layer}" style="animation-delay:${delay}s" cx="${x}" cy="${y}" r="${r}" fill="${color}"/>`;
   }
   return out;
@@ -248,7 +254,6 @@ ${groups}${panel.close}`;
 }
 
 const PLANETS = {
-  pawlaris: { seed: 11, light: '#C3B8FF', dark: '#3A2A9E', band: '#EDE9FF', ring: '#FFD27A', tilt: -18, spin: 24 },
   bytewatch: { seed: 23, light: '#8FE9F5', dark: '#0C4E63', band: '#D9FBFF', moons: [[1.5, 0.12, 14, '#EEF0FF', 3]], spin: 20 },
   taskmate: { seed: 37, light: '#8CF0C6', dark: '#0E5A43', band: '#E1FFF3', moons: [[1.42, 0.1, 11, '#FFD27A', 1], [1.78, 0.07, 19, '#EEF0FF', 8]], spin: 28 },
   contacts: { seed: 41, light: '#9CC2FF', dark: '#1B3F8F', band: '#E4EEFF', ring: '#C8A6FF', tilt: 14, spin: 22 },
@@ -264,6 +269,172 @@ function planetIcon(name) {
 ${stars(random, 9, S, S, { minR: 0.9, maxR: 1.8, color: C.accent })}
 ${world.body}`;
   return svg(S, S, `A small planet for ${name}`, '', body);
+}
+
+// The Pawlaris app icon: the paw-star mark on its night sky. The geometry is
+// the project's own master, spec/brand/icon.svg in hudson-uchoa/pawlaris.
+const PAW_PAD = 'M256 262C300 262 340 300 366 340C392 380 372 430 326 430C300 430 282 414 256 414C230 414 212 430 186 430C140 430 120 380 146 340C172 300 212 262 256 262Z';
+const PAW_TOES = [[108, 264, 50, -14], [184, 156, 58, -5], [330, 150, 75.4, 5], [404, 264, 50, 14]];
+const PAW_DUST = [[58, 70, 3, 0.7], [452, 96, 2.5, 0.6], [96, 420, 2, 0.5], [430, 400, 3, 0.65], [250, 44, 2, 0.5], [476, 250, 2, 0.45], [36, 250, 2.5, 0.5], [380, 470, 2, 0.4], [150, 480, 2.5, 0.45]];
+
+function pawlarisIcon() {
+  const S = 180;
+  const tile = 124;
+  const corner = 28;
+  const offset = (S - tile) / 2;
+  const scale = tile / 512;
+  const random = seeded(1067);
+  const style = `
+  @keyframes shine { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.14) } }
+  @keyframes breathe { 0%, 100% { opacity: 0.7 } 50% { opacity: 1 } }
+  .toe { transform-box: fill-box; transform-origin: center; animation: shine 3.8s ease-in-out infinite }
+  .glow { animation: breathe 3.8s ease-in-out infinite }`;
+  const toes = PAW_TOES
+    .map(([x, y, r, turn], i) => `<g class="toe" style="animation-delay:${n(-i * 0.95)}s"><g transform="rotate(${turn} ${x} ${y})">${sparkle(x, y, r)}</g></g>`)
+    .join('');
+  const dust = PAW_DUST
+    .map(([x, y, r, opacity], i) => `<circle class="t${1 + (i % 3)}" style="animation-delay:${n(-i * 0.7)}s" cx="${x}" cy="${y}" r="${r}" fill="#FFFFFF" fill-opacity="${opacity}"/>`)
+    .join('');
+  const body = `<defs><radialGradient id="is" cx="50%" cy="28%" r="85%"><stop offset="0" stop-color="#1B2157"/><stop offset="1" stop-color="${C.bg}"/></radialGradient>
+<linearGradient id="ip" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C3B8FF"/><stop offset="1" stop-color="#7767E6"/></linearGradient>
+<radialGradient id="ig"><stop offset="0" stop-color="${C.star}" stop-opacity="0.5"/><stop offset="1" stop-color="${C.star}" stop-opacity="0"/></radialGradient>
+<radialGradient id="ih"><stop offset="0.62" stop-color="${C.accent}" stop-opacity="0.3"/><stop offset="1" stop-color="${C.accent}" stop-opacity="0"/></radialGradient>
+<clipPath id="ic"><rect width="512" height="512" rx="${n(corner / scale)}"/></clipPath></defs>
+${stars(random, 9, S, S, { minR: 0.9, maxR: 1.8, color: C.accent })}
+<circle cx="${S / 2}" cy="${S / 2}" r="88" fill="url(#ih)"/>
+<g transform="translate(${offset} ${offset}) scale(${scale})"><g clip-path="url(#ic)"><rect width="512" height="512" fill="url(#is)"/>${dust}
+<g transform="translate(256 258) scale(0.66) translate(-256 -252)"><circle class="glow" cx="330" cy="150" r="118" fill="url(#ig)"/><path d="${PAW_PAD}" fill="url(#ip)"/>${toes}</g></g></g>
+<rect x="${offset}" y="${offset}" width="${tile}" height="${tile}" rx="${corner}" fill="none" stroke="${C.accent}" stroke-opacity="0.45"/>`;
+  return svg(S, S, 'The Pawlaris app icon: a paw whose toe pads are four stars', style, body);
+}
+
+// The grade is the one the widely used github-readme-stats card gives
+// (anuraghazra/github-readme-stats, src/calculateRank.js, MIT), fed with
+// all-time commits: each count is squashed to 0..1, weighted and averaged.
+function grade(stats) {
+  const halving = (x) => 1 - 2 ** -x;
+  const saturating = (x) => x / (1 + x);
+  const score =
+    (2 * halving(stats.commits / 1000) +
+      3 * halving(stats.pullRequests / 50) +
+      halving(stats.issues / 25) +
+      halving(stats.reviews / 2) +
+      4 * saturating(stats.stars / 50) +
+      saturating(stats.followers / 10)) /
+    12;
+  const percentile = (1 - score) * 100;
+  const levels = [[1, 'S'], [12.5, 'A+'], [25, 'A'], [37.5, 'A-'], [50, 'B+'], [62.5, 'B'], [75, 'B-'], [87.5, 'C+'], [100, 'C']];
+  return { level: levels.find(([limit]) => percentile <= limit)[1], score };
+}
+
+const count = (value) => value.toLocaleString('en-US');
+
+function telemetry() {
+  const W = 1200;
+  const H = 360;
+  const random = seeded(31337);
+  const panel = sky('t', W, H, [
+    [200, 215, 330, C.nebulaA, 0.34],
+    [1040, 380, 360, C.nebulaB, 0.2],
+  ]);
+  const { level, score } = grade(STATS);
+  const cx = 200;
+  const cy = 216;
+  const r = 90;
+  const around = n(2 * Math.PI * r);
+  const lit = n(around * score);
+  const readouts = [
+    [STATS.commits, 'Commits, all time'],
+    [STATS.pullRequests, 'Pull requests'],
+    [STATS.stars, 'Stars earned'],
+    [STATS.commitsLastYear, 'Commits, last 12 months'],
+    [STATS.followers, 'Followers'],
+    [STATS.repositories, 'Public repositories'],
+  ];
+  const columns = [424, 716, 952];
+  const rows = [184, 290];
+  const style = `
+  @keyframes fill { from { stroke-dasharray: 0 ${around} } }
+  .arc { animation: fill 2.6s ease-out backwards }`;
+  const cells = readouts
+    .map(([value, label], i) => {
+      const x = columns[i % 3];
+      const y = rows[Math.floor(i / 3)];
+      return `<g class="t${1 + (i % 3)}" style="animation-delay:${n(-i * 0.8)}s">${sparkle(x - 24, y - 17, 8)}</g>
+<text x="${x}" y="${y}" font-family="${SANS}" font-size="48" font-weight="700" fill="${C.text}">${count(value)}</text>
+<text x="${x}" y="${y + 30}" font-family="${SANS}" font-size="19" fill="${C.muted}">${esc(label)}</text>`;
+    })
+    .join('\n');
+  const body = `<defs>${panel.defs}
+<linearGradient id="ta" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.star}"/><stop offset="1" stop-color="${C.accent}"/></linearGradient>
+<radialGradient id="td" cx="0.35" cy="0.3" r="0.9"><stop offset="0" stop-color="#2A2470"/><stop offset="1" stop-color="${C.surface}"/></radialGradient></defs>
+${panel.open}
+${stars(random, 110, W, H, { maxR: 1.5, skip: (x, y) => x > 380 && y > 120 && y < 336 })}
+<text x="72" y="66" font-family="${MONO}" font-size="16" letter-spacing="2.5" fill="${C.accent}">FLIGHT TELEMETRY</text>
+<text x="1128" y="66" text-anchor="end" font-family="${MONO}" font-size="14" fill="${C.muted}">public activity on GitHub · refreshed every hour</text>
+<circle cx="${cx}" cy="${cy}" r="${r - 14}" fill="url(#td)"/>
+<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${C.border}" stroke-width="10"/>
+<circle class="arc" cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="url(#ta)" stroke-width="10" stroke-linecap="round" stroke-dasharray="${lit} ${around}" transform="rotate(-90 ${cx} ${cy})"/>
+<g style="transform-origin:${cx}px ${cy}px;animation:spin 18s linear infinite"><circle cx="${cx}" cy="${cy - r - 22}" r="6" fill="${C.text}"/></g>
+<text x="${cx}" y="${cy + 18}" text-anchor="middle" font-family="${SANS}" font-size="74" font-weight="700" fill="${C.text}">${esc(level)}</text>
+<text x="${cx}" y="${cy + 48}" text-anchor="middle" font-family="${MONO}" font-size="14" letter-spacing="3" fill="${C.muted}">GRADE</text>
+${cells}
+${panel.close}`;
+  const spoken = readouts.map(([value, label]) => `${label}: ${count(value)}`).join('. ');
+  return svg(W, H, `Flight telemetry. Grade ${level}. ${spoken}.`, style, body);
+}
+
+const SPECTRUM = ['#A99BFF', '#5FE0B4', '#FFD27A', '#FFA9E6', '#8FE9F5', '#FFC08F', '#9CC2FF', '#A4A9D1'];
+
+function spectrum() {
+  const W = 1200;
+  const H = 216;
+  const random = seeded(2718);
+  const panel = sky('s', W, H, [
+    [980, 20, 340, C.nebulaA, 0.26],
+    [160, 240, 300, C.nebulaB, 0.2],
+  ]);
+  const total = STATS.languages.reduce((sum, language) => sum + language.bytes, 0);
+  const shown = STATS.languages.slice(0, 7);
+  const rest = STATS.languages.slice(7).reduce((sum, language) => sum + language.bytes, 0);
+  if (rest > 0) shown.push({ name: 'Other', bytes: rest });
+  const bar = { x: 72, y: 88, w: 1056, h: 20 };
+  const percent = (bytes) => {
+    const value = (bytes / total) * 100;
+    return value < 0.1 ? '<0.1%' : `${value.toFixed(1)}%`;
+  };
+  let x = bar.x;
+  const segments = shown
+    .map((language, i) => {
+      const width = (language.bytes / total) * bar.w;
+      const piece = `<rect x="${n(x)}" y="${bar.y}" width="${n(width + 0.5)}" height="${bar.h}" fill="${SPECTRUM[i]}"/>`;
+      x += width;
+      return piece;
+    })
+    .join('');
+  const legend = shown
+    .map((language, i) => {
+      const lx = bar.x + (i % 4) * 264;
+      const ly = 152 + Math.floor(i / 4) * 36;
+      return `<circle cx="${lx + 7}" cy="${ly - 6.5}" r="7" fill="${SPECTRUM[i]}"/>
+<text x="${lx + 24}" y="${ly}" font-family="${SANS}" font-size="19" fill="${C.text}">${esc(language.name)}<tspan dx="9" font-family="${MONO}" font-size="16" fill="${C.muted}">${esc(percent(language.bytes))}</tspan></text>`;
+    })
+    .join('\n');
+  const style = `
+  @keyframes sweep { from { transform: translateX(-260px) } to { transform: translateX(1300px) } }
+  .sweep { animation: sweep 7s linear infinite }`;
+  const body = `<defs>${panel.defs}
+<clipPath id="sb"><rect x="${bar.x}" y="${bar.y}" width="${bar.w}" height="${bar.h}" rx="${bar.h / 2}"/></clipPath>
+<linearGradient id="sw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient></defs>
+${panel.open}
+${stars(random, 80, W, H, { maxR: 1.5, skip: (x, y) => y > 122 && y < 196 })}
+<text x="72" y="60" font-family="${MONO}" font-size="16" letter-spacing="2.5" fill="${C.accent}">SPECTRUM</text>
+<text x="1128" y="60" text-anchor="end" font-family="${MONO}" font-size="14" fill="${C.muted}">languages by bytes of code in public repositories</text>
+<g clip-path="url(#sb)">${segments}<rect class="sweep transient" x="0" y="${bar.y}" width="200" height="${bar.h}" fill="url(#sw)"/></g>
+${legend}
+${panel.close}`;
+  const spoken = shown.map((language) => `${language.name} ${percent(language.bytes)}`).join(', ');
+  return svg(W, H, `Languages by bytes of code in public repositories: ${spoken}.`, style, body);
 }
 
 function pill(label) {
@@ -309,6 +480,9 @@ const files = {
   'divider.svg': divider(),
   'constellation.svg': constellation(),
   'footer.svg': footer(),
+  'telemetry.svg': telemetry(),
+  'spectrum.svg': spectrum(),
+  'icon-pawlaris.svg': pawlarisIcon(),
   'pill-repositories.svg': pill('All repositories'),
   'pill-linkedin.svg': pill('LinkedIn'),
   'pill-instagram.svg': pill('Instagram'),

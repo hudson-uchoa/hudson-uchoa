@@ -51,14 +51,28 @@ Katarina. The space theme was never really a choice.
 
 <img src="assets/divider.svg" width="100%" alt="">
 
+## Flight telemetry
+
+<img src="assets/telemetry.svg" width="100%" alt="Flight telemetry: a grade inside a ring, and counts of commits, pull requests, stars, followers and public repositories.">
+
+<img src="assets/spectrum.svg" width="100%" alt="A spectrum bar of the languages in my public repositories, by bytes of code.">
+
+<sub>Public activity only, read from the GitHub API and redrawn every hour by
+<a href=".github/workflows/telemetry.yml">a workflow in this repository</a>.
+The grade uses the formula of the
+<a href="https://github.com/anuraghazra/github-readme-stats">github-readme-stats</a>
+card.</sub>
+
+<img src="assets/divider.svg" width="100%" alt="">
+
 ## Projects in orbit
 
-Six worlds worth a visit. Click a planet to land on its repository.
+Six worlds worth a visit. Click one to land on its repository.
 
 <table>
   <tr>
     <td width="50%" align="center" valign="top">
-      <a href="https://github.com/hudson-uchoa/pawlaris"><img src="assets/planet-pawlaris.svg" width="150" alt=""></a>
+      <a href="https://github.com/hudson-uchoa/pawlaris"><img src="assets/icon-pawlaris.svg" width="150" alt=""></a>
       <h3><a href="https://github.com/hudson-uchoa/pawlaris">Pawlaris</a></h3>
       Self-hosted, offline-first pet care for a household: tasks, medication, walks and who did what. Built in the open, spec first.
       <br><br>
