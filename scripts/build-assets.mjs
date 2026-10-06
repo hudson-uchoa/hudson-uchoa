@@ -437,6 +437,94 @@ ${panel.close}`;
   return svg(W, H, `Languages by bytes of code in public repositories: ${spoken}.`, style, body);
 }
 
+// Insurge and Orbyta, its product system, as the studio's public site
+// describes them: a violet black hole with seven planets in orbit, and one
+// moon per module of each product.
+const INSURGE = { violet: '#7224FB', deep: '#4B0FCE', lavender: '#B895FF', glow: '#D075EF', void: '#030308' };
+const ORBITS = [[170, 70], [260, 108], [345, 150]];
+// name, what it runs, moons, orbit, angle in degrees, light and dark colour
+const ORBYTA = [
+  ['Heimdall', 'accounts', 5, 2, -140, '#FFD27A', '#9A5B12'],
+  ['Mercúrio', 'orders', 5, 2, -40, '#FFC08F', '#8C3A14'],
+  ['Eco', 'support', 7, 2, 90, '#8CF0C6', '#0E5A43'],
+  ['Muninn', 'tax records', 5, 1, 155, '#9CC2FF', '#1B3F8F'],
+  ['Têmis', 'freight', 5, 1, 25, '#FFA9E6', '#7A1F66'],
+  ['Huginn', 'assistant', 3, 0, 200, '#C3B8FF', '#3A2A9E'],
+  ['Íris', 'tickets', 4, 0, -20, '#8FE9F5', '#0C4E63'],
+];
+
+function insurge() {
+  const W = 1200;
+  const H = 470;
+  const cx = 850;
+  const cy = 232;
+  const random = seeded(7224);
+  const panel = sky('i', W, H, [
+    [cx, cy, 430, INSURGE.violet, 0.3],
+    [120, 60, 340, INSURGE.deep, 0.3],
+    [300, 480, 320, C.nebulaB, 0.16],
+  ]);
+  const disc = { rx: 108, ry: 25, tilt: -12 };
+  const arc = (sweep) => `M${cx - disc.rx} ${cy}A${disc.rx} ${disc.ry} 0 0 ${sweep} ${cx + disc.rx} ${cy}`;
+  const turned = `transform="rotate(${disc.tilt} ${cx} ${cy})"`;
+  const style = `
+  @keyframes flow { to { stroke-dashoffset: -96 } }
+  @keyframes swell { 0%, 100% { opacity: 0.75 } 50% { opacity: 1 } }
+  .flow { stroke-dasharray: 30 66; animation: flow 3.4s linear infinite }
+  .swell { animation: swell 5s ease-in-out infinite }`;
+  const orbits = ORBITS
+    .map(([rx, ry]) => `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="none" stroke="${INSURGE.lavender}" stroke-opacity="0.3" stroke-dasharray="2 7" stroke-linecap="round"/>`)
+    .join('');
+  let gradients = '';
+  const moonCount = ORBYTA.reduce((sum, [, , moons]) => sum + moons, 0);
+  const planets = ORBYTA
+    .map(([name, role, moons, orbit, angle, light, dark], i) => {
+      const [rx, ry] = ORBITS[orbit];
+      const x = n(cx + rx * Math.cos((angle * Math.PI) / 180));
+      const y = n(cy + ry * Math.sin((angle * Math.PI) / 180));
+      gradients += `<radialGradient id="io${i}" cx="0.35" cy="0.3" r="0.9"><stop offset="0" stop-color="${light}"/><stop offset="1" stop-color="${dark}"/></radialGradient>`;
+      let ring = '';
+      for (let m = 0; m < moons; m += 1) {
+        const turn = (m / moons) * 2 * Math.PI;
+        ring += `<circle cx="${n(x + 25 * Math.cos(turn))}" cy="${n(y + 25 * Math.sin(turn))}" r="2.3" fill="${C.text}"/>`;
+      }
+      const label = `fill="${C.text}" stroke="${C.bg}" stroke-width="5" stroke-linejoin="round" stroke-opacity="0.85" paint-order="stroke"`;
+      return `<circle cx="${x}" cy="${y}" r="25" fill="none" stroke="${INSURGE.lavender}" stroke-opacity="0.18"/>
+<g style="transform-origin:${x}px ${y}px;animation:spin ${14 + i * 3}s linear infinite">${ring}</g>
+<circle cx="${x}" cy="${y}" r="13" fill="url(#io${i})"/>
+<text x="${x}" y="${y + 47}" text-anchor="middle" font-family="${SANS}" font-size="18" font-weight="600" ${label}>${esc(name)}</text>
+<text x="${x}" y="${y + 64}" text-anchor="middle" font-family="${MONO}" font-size="12.5" fill="${C.muted}">${esc(role)}</text>`;
+    })
+    .join('\n');
+  const pill = { x: 72, y: 352, w: 312, h: 52 };
+  const body = `<defs>${panel.defs}${gradients}
+<radialGradient id="ih"><stop offset="0.3" stop-color="${INSURGE.violet}" stop-opacity="0.55"/><stop offset="1" stop-color="${INSURGE.violet}" stop-opacity="0"/></radialGradient>
+<radialGradient id="ir"><stop offset="0.6" stop-color="${INSURGE.deep}" stop-opacity="0"/><stop offset="0.7" stop-color="${INSURGE.glow}"/><stop offset="0.82" stop-color="${INSURGE.violet}" stop-opacity="0.85"/><stop offset="1" stop-color="${INSURGE.violet}" stop-opacity="0"/></radialGradient>
+<linearGradient id="id" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${INSURGE.deep}"/><stop offset="0.45" stop-color="${INSURGE.violet}"/><stop offset="0.8" stop-color="${INSURGE.glow}"/><stop offset="1" stop-color="${INSURGE.lavender}"/></linearGradient></defs>
+${panel.open}
+${stars(random, 130, W, H, { maxR: 1.6, skip: (x, y) => (x < 500 && y > 80 && y < 420) || (x > 700 && y < 70) })}
+${orbits}
+<circle class="swell" cx="${cx}" cy="${cy}" r="120" fill="url(#ih)"/>
+<path d="${arc(1)}" ${turned} fill="none" stroke="url(#id)" stroke-width="9" stroke-linecap="round" opacity="0.6"/>
+<circle cx="${cx}" cy="${cy}" r="60" fill="url(#ir)"/>
+<circle cx="${cx}" cy="${cy}" r="39" fill="${INSURGE.void}"/>
+<path d="${arc(0)}" ${turned} fill="none" stroke="url(#id)" stroke-width="11" stroke-linecap="round"/>
+<path class="flow" d="${arc(0)}" ${turned} fill="none" stroke="${C.text}" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round"/>
+${planets}
+<text x="1128" y="52" text-anchor="end" font-family="${MONO}" font-size="14" fill="${C.muted}">ORBYTA · ${ORBYTA.length} planets · ${moonCount} moons · under construction</text>
+<text x="72" y="116" font-family="${MONO}" font-size="16" letter-spacing="2.5" fill="${INSURGE.lavender}">THE STUDIO I BUILD WITH</text>
+<text x="68" y="196" font-family="${SANS}" font-size="78" font-weight="700" fill="${C.text}">Insurge</text>
+<text x="72" y="242" font-family="${SANS}" font-size="23" fill="${C.text}">Custom software, against the generic.</text>
+<text x="72" y="284" font-family="${SANS}" font-size="18" fill="${C.muted}">Systems, integrations, mobile apps and AI agents,</text>
+<text x="72" y="309" font-family="${SANS}" font-size="18" fill="${C.muted}">made to fit how a business really runs.</text>
+<rect x="${pill.x}" y="${pill.y}" width="${pill.w}" height="${pill.h}" rx="14" fill="${C.surface}" stroke="${INSURGE.violet}" stroke-width="1.5"/>
+<text x="${pill.x + 20}" y="${pill.y + 34}" font-family="${MONO}" font-size="20" fill="${INSURGE.lavender}">&gt;</text>
+<text x="${pill.x + 50}" y="${pill.y + 34}" font-family="${MONO}" font-size="20" fill="${C.text}">insurge.pages.dev</text>
+${panel.close}`;
+  const spoken = ORBYTA.map(([name, role, moons]) => `${name} (${role}, ${moons} moons)`).join(', ');
+  return svg(W, H, `Insurge: custom software, against the generic. Orbyta, its product system, drawn as a violet black hole with seven planets in orbit: ${spoken}.`, style, body);
+}
+
 function pill(label) {
   const W = Math.round(64 + label.length * 9.6);
   const H = 44;
@@ -481,9 +569,11 @@ const files = {
   'constellation.svg': constellation(),
   'footer.svg': footer(),
   'telemetry.svg': telemetry(),
+  'insurge.svg': insurge(),
   'spectrum.svg': spectrum(),
   'icon-pawlaris.svg': pawlarisIcon(),
   'pill-repositories.svg': pill('All repositories'),
+  'pill-insurge.svg': pill('Insurge'),
   'pill-linkedin.svg': pill('LinkedIn'),
   'pill-instagram.svg': pill('Instagram'),
 };

@@ -5,6 +5,8 @@
 <p align="center">
   <a href="https://github.com/hudson-uchoa?tab=repositories"><img src="assets/pill-repositories.svg" height="44" alt="All repositories"></a>
   &nbsp;
+  <a href="https://insurge.pages.dev/"><img src="assets/pill-insurge.svg" height="44" alt="Insurge"></a>
+  &nbsp;
   <a href="https://www.linkedin.com/in/hudson-uchoa/"><img src="assets/pill-linkedin.svg" height="44" alt="LinkedIn"></a>
   &nbsp;
   <a href="https://www.instagram.com/hudson.uchoa/"><img src="assets/pill-instagram.svg" height="44" alt="Instagram"></a>
@@ -31,6 +33,23 @@ At home there are four cats and a dog: Aurora, Asteria, Aelin, Andrômeda and
 Katarina. The space theme was never really a choice.
 
 > Change starts with you. It starts with me. It starts with all of us.
+
+<img src="assets/divider.svg" width="100%" alt="">
+
+## Home system: Insurge
+
+<a href="https://insurge.pages.dev/">
+  <img src="assets/insurge.svg" width="100%" alt="Insurge: custom software, against the generic. Its product system, Orbyta, drawn as a violet black hole with seven planets in orbit: Heimdall, Mercúrio, Eco, Muninn, Têmis, Huginn and Íris, each with one moon per module.">
+</a>
+
+[Insurge](https://insurge.pages.dev/) is the software studio I am helping get
+off the ground: custom systems, integrations, mobile apps and AI agents for
+businesses that have outgrown off-the-shelf software. Its own products live in
+**Orbyta**, a system of seven planets around a black hole. Each planet runs one
+part of an operation, each moon is one of its modules, and all of it is still
+under construction.
+
+What leaves the studio will carry a small **by Insurge** mark.
 
 <img src="assets/divider.svg" width="100%" alt="">
 
@@ -129,7 +148,7 @@ Six worlds worth a visit. Click one to land on its repository.
 ## Open a channel
 
 The quickest way to reach me is
-[LinkedIn](https://www.linkedin.com/in/hudson-lima-uchoa/). Questions about a
+[LinkedIn](https://www.linkedin.com/in/hudson-uchoa/). Questions about a
 repository are welcome in its issues, and a star on anything you found useful
 keeps the lights on up here.
 

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131 44" width="131" height="44" role="img">
+<title>Insurge</title>
+<style>
+  @keyframes twinkle { 0%, 100% { opacity: 0.25 } 50% { opacity: 1 } }
+  @keyframes spin { to { transform: rotate(360deg) } }
+  @keyframes drift { to { transform: translateX(var(--drift)) } }
+  .t1 { animation: twinkle 3.1s ease-in-out infinite }
+  .t2 { animation: twinkle 4.7s ease-in-out infinite }
+  .t3 { animation: twinkle 6.3s ease-in-out infinite }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important }
+    .cover, .transient { display: none }
+  }
+</style>
+<rect x="0.75" y="0.75" width="129.5" height="42.5" rx="21.25" fill="#0D1024" stroke="#A99BFF" stroke-width="1.5"/>
+<g class="t2"><path fill="#FFD27A" d="M26 14Q28.4 19.6 34 22Q28.4 24.4 26 30Q23.6 24.4 18 22Q23.6 19.6 26 14Z"/></g>
+<text x="44" y="27.5" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#EEF0FF">Insurge</text>
+</svg>
