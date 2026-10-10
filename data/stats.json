@@ -1,7 +1,7 @@
 {
   "login": "hudson-uchoa",
-  "commits": 996,
-  "commitsLastYear": 286,
+  "commits": 1112,
+  "commitsLastYear": 402,
   "pullRequests": 103,
   "issues": 0,
   "reviews": 0,
@@ -10,16 +10,16 @@
   "repositories": 22,
   "languages": [
     {
+      "name": "Python",
+      "bytes": 667652
+    },
+    {
       "name": "PHP",
       "bytes": 458367
     },
     {
-      "name": "Python",
-      "bytes": 275147
-    },
-    {
       "name": "TypeScript",
-      "bytes": 186825
+      "bytes": 239749
     },
     {
       "name": "JavaScript",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Dockerfile",
-      "bytes": 1606
+      "bytes": 1631
     },
     {
       "name": "Makefile",
