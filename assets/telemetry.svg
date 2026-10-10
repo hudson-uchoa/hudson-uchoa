@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img">
-<title>Flight telemetry. Grade B. Commits, all time: 996. Pull requests: 103. Stars earned: 26. Commits, last 12 months: 286. Followers: 45. Public repositories: 22.</title>
+<title>Flight telemetry. Grade B. Commits, all time: 996. Pull requests: 103. Stars earned: 26. Commits, last 12 months: 286. Followers: 46. Public repositories: 22.</title>
 <style>
   @keyframes twinkle { 0%, 100% { opacity: 0.25 } 50% { opacity: 1 } }
   @keyframes spin { to { transform: rotate(360deg) } }
@@ -24,7 +24,7 @@
 <text x="1128" y="66" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, Menlo, monospace" font-size="14" fill="#A4A9D1">public activity on GitHub · refreshed every hour</text>
 <circle cx="200" cy="216" r="76" fill="url(#td)"/>
 <circle cx="200" cy="216" r="90" fill="none" stroke="#2A2F5C" stroke-width="10"/>
-<circle class="arc" cx="200" cy="216" r="90" fill="none" stroke="url(#ta)" stroke-width="10" stroke-linecap="round" stroke-dasharray="257.5 565.49" transform="rotate(-90 200 216)"/>
+<circle class="arc" cx="200" cy="216" r="90" fill="none" stroke="url(#ta)" stroke-width="10" stroke-linecap="round" stroke-dasharray="257.66 565.49" transform="rotate(-90 200 216)"/>
 <g style="transform-origin:200px 216px;animation:spin 18s linear infinite"><circle cx="200" cy="104" r="6" fill="#EEF0FF"/></g>
 <text x="200" y="234" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="74" font-weight="700" fill="#EEF0FF">B</text>
 <text x="200" y="264" text-anchor="middle" font-family="ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, Menlo, monospace" font-size="14" letter-spacing="3" fill="#A4A9D1">GRADE</text>
@@ -41,7 +41,7 @@
 <text x="424" y="290" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#EEF0FF">286</text>
 <text x="424" y="320" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="19" fill="#A4A9D1">Commits, last 12 months</text>
 <g class="t2" style="animation-delay:-3.2s"><path fill="#FFD27A" d="M692 265Q694.4 270.6 700 273Q694.4 275.4 692 281Q689.6 275.4 684 273Q689.6 270.6 692 265Z"/></g>
-<text x="716" y="290" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#EEF0FF">45</text>
+<text x="716" y="290" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#EEF0FF">46</text>
 <text x="716" y="320" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="19" fill="#A4A9D1">Followers</text>
 <g class="t3" style="animation-delay:-4s"><path fill="#FFD27A" d="M928 265Q930.4 270.6 936 273Q930.4 275.4 928 281Q925.6 275.4 920 273Q925.6 270.6 928 265Z"/></g>
 <text x="952" y="290" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#EEF0FF">22</text>
