@@ -1,7 +1,7 @@
 {
   "login": "hudson-uchoa",
-  "commits": 1147,
-  "commitsLastYear": 437,
+  "commits": 1241,
+  "commitsLastYear": 531,
   "pullRequests": 103,
   "issues": 0,
   "reviews": 0,
@@ -9,6 +9,10 @@
   "followers": 45,
   "repositories": 22,
   "languages": [
+    {
+      "name": "TypeScript",
+      "bytes": 761233
+    },
     {
       "name": "Python",
       "bytes": 752097
@@ -18,12 +22,8 @@
       "bytes": 458367
     },
     {
-      "name": "TypeScript",
-      "bytes": 259925
-    },
-    {
       "name": "JavaScript",
-      "bytes": 179967
+      "bytes": 180551
     },
     {
       "name": "Blade",
