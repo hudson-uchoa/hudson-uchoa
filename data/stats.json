@@ -1,7 +1,7 @@
 {
   "login": "hudson-uchoa",
-  "commits": 1241,
-  "commitsLastYear": 531,
+  "commits": 1801,
+  "commitsLastYear": 1091,
   "pullRequests": 103,
   "issues": 0,
   "reviews": 0,
@@ -11,11 +11,11 @@
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 761233
+      "bytes": 2290310
     },
     {
       "name": "Python",
-      "bytes": 752097
+      "bytes": 756299
     },
     {
       "name": "PHP",
@@ -23,7 +23,7 @@
     },
     {
       "name": "JavaScript",
-      "bytes": 180551
+      "bytes": 263848
     },
     {
       "name": "Blade",
@@ -38,12 +38,16 @@
       "bytes": 66322
     },
     {
-      "name": "C#",
-      "bytes": 4436
+      "name": "PowerShell",
+      "bytes": 14053
     },
     {
       "name": "Shell",
-      "bytes": 2225
+      "bytes": 13845
+    },
+    {
+      "name": "C#",
+      "bytes": 4436
     },
     {
       "name": "Dockerfile",
